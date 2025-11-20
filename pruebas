@@ -1,1 +1,35 @@
+DOCUMENTO: PLAN DE PRUEBAS FUNCIONALES
+VERSIÓN 1.0
 
+PROYECTO: CALCULADORA DE PRESUPUESTO MENSUAL
+
+1. INTRODUCCIÓN
+
+1.1 Propósito
+Este plan establece los casos de prueba para validar la implementación de las mejoras de mantenimiento propuestas (Validación, Persistencia, Multiplataforma).
+
+1.2 Alcance
+Verificación de los requerimientos funcionales RF-05, RF-07, y no funcionales RNF-04 y RNF-05 del DRS v2.
+
+2. CASOS DE PRUEBA
+
+CP-01: Validación de Datos (Monto Negativo)
+Objetivo: Verificar el correcto funcionamiento del Mantenimiento Correctivo (RF-05).
+Descripción: Intentar registrar un gasto con un valor negativo (ej., -100).
+Pre-condiciones: Interfaz de registro de gastos disponible.
+Resultado Esperado: El sistema debe **mostrar un mensaje de advertencia** sobre el monto no válido y **bloquear el registro** del movimiento.
+Validación: Se confirma que la lógica de validación funciona, evitando inconsistencias en el cálculo.
+
+CP-02: Persistencia de Datos (Cierre y Reapertura)
+Objetivo: Verificar el correcto funcionamiento del Mantenimiento Preventivo (RF-07, RNF-04).
+Descripción: Registrar un ingreso y un gasto, cerrar la aplicación completamente (simulando un reinicio), y luego reabrirla.
+Pre-condiciones: Aplicación con el módulo de persistencia (SQLite) implementado.
+Resultado Esperado: Los registros creados previamente (Ingreso y Gasto) deben estar **disponibles y visibles** en el historial, y el balance total debe conservarse correctamente.
+Validación: Se confirma la robustez y la conservación de datos entre sesiones.
+
+CP-03: Adaptabilidad Multiplataforma (PWA en Móvil)
+Objetivo: Verificar el correcto funcionamiento del Mantenimiento Adaptativo (RNF-05, RNF-06).
+Descripción: Acceder a la aplicación (PWA) desde el navegador de un dispositivo móvil (ej., Android o iOS).
+Pre-condiciones: Versión PWA implementada y accesible vía URL.
+Resultado Esperado: La interfaz gráfica debe **adaptarse de forma responsive** a la pantalla pequeña, y el registro de ingresos/gastos debe funcionar correctamente sin fallos visuales ni funcionales.
+Validación: Se confirma la accesibilidad y usabilidad del sistema en diferentes entornos operativos.
