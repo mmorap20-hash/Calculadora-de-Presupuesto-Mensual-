@@ -1,1 +1,63 @@
+DOCUMENTO DE PROPUESTA DE MANTENIMIENTO
+VERSIÓN 1.0
 
+PROYECTO: CALCULADORA DE PRESUPUESTO MENSUAL
+
+1. INTRODUCCIÓN
+
+1.1. Propósito
+[cite_start]Este documento detalla la estrategia de mantenimiento integral propuesta para la Calculadora de Presupuesto Mensual, abarcando los enfoques Correctivo, Preventivo y Adaptativo[cite: 179]. [cite_start]El objetivo es incrementar la confiabilidad, estabilidad y adaptabilidad de la aplicación[cite: 123].
+
+1.2. Alcance
+[cite_start]La propuesta cubre la implementación de un módulo de validación de datos, un sistema de almacenamiento persistente, y la adaptación multiplataforma (PWA)[cite: 180].
+
+---
+
+2. MANTENIMIENTO CORRECTIVO
+
+2.1. Situación Problemática
+[cite_start]Inconsistencias en el cálculo del balance total debido a la entrada de datos incompletos, negativos o duplicados[cite: 96, 97].
+[cite_start]Tipo de Mantenimiento Aplicable: Correctivo[cite: 99].
+
+2.2. Propuesta Técnica (Validación de Datos de Entrada)
+[cite_start]Se implementarán validaciones de entrada para corregir errores en el funcionamiento del cálculo[cite: 100, 103].
+* [cite_start]**Acción 1:** Agregar rutinas de validación en las funciones principales para verificar que los montos sean **numéricos y positivos**[cite: 103, 137].
+* [cite_start]**Acción 2:** Generar **mensajes de advertencia** cuando se detecten datos vacíos o incorrectos[cite: 138].
+* [cite_start]**Acción 3:** Bloquear el registro de información hasta que los valores cumplan con las condiciones establecidas[cite: 139].
+
+2.3. Impacto Esperado
+[cite_start]Mejora la precisión de los cálculos y aumenta la confiabilidad de los resultados[cite: 141].
+
+---
+
+3. MANTENIMIENTO PREVENTIVO
+
+3.1. Situación Problemática
+[cite_start]Falta de control de persistencia de datos; si se cierra la aplicación, los registros pueden perderse[cite: 105, 106, 114].
+[cite_start]Tipo de Mantenimiento Aplicable: Preventivo[cite: 112].
+
+3.2. Propuesta Técnica (Sistema de Almacenamiento Persistente)
+[cite_start]Se busca anticipar posibles fallos futuros fortaleciendo la estabilidad del sistema[cite: 113].
+* [cite_start]**Acción 1:** Integrar una **base de datos local** (por ejemplo, SQLite) o un sistema de almacenamiento en archivos JSON[cite: 115, 154].
+* [cite_start]**Acción 2:** Configurar operaciones **CRUD** (crear, leer, actualizar, eliminar) para gestionar los movimientos financieros[cite: 155].
+* [cite_start]**Acción 3:** Implementar una función de respaldo automático al cierre de la aplicación[cite: 156].
+
+3.3. Impacto Esperado
+[cite_start]Evita la pérdida de información, asegura la persistencia de datos y mejora la robustez de la aplicación[cite: 152, 158].
+
+---
+
+4. MANTENIMIENTO ADAPTATIVO
+
+4.1. Situación Problemática
+[cite_start]El sistema está diseñado inicialmente para uso en escritorio, limitando su accesibilidad en dispositivos móviles[cite: 117].
+[cite_start]Tipo de Mantenimiento Aplicable: Adaptativo[cite: 118].
+
+4.2. Propuesta Técnica (Adaptación a Multiplataformas mediante PWA)
+[cite_start]El objetivo es ajustar el sistema a nuevos entornos tecnológicos[cite: 119].
+* [cite_start]**Acción 1:** Implementar una versión web progresiva (**PWA**) que permita su ejecución eficiente en navegadores móviles y tablets[cite: 121, 162].
+* [cite_start]**Acción 2:** Adaptar la interfaz gráfica a un **diseño responsive** con HTML5, CSS3 y JavaScript[cite: 167].
+* [cite_start]**Acción 3:** Implementar un *service worker* para funcionamiento **offline** y carga rápida[cite: 168].
+
+4.3. Impacto Esperado
+[cite_start]Amplía el alcance y accesibilidad del sistema [cite: 164][cite_start], volviéndolo más moderno y adaptable, lo que a su vez incrementa la mantenibilidad[cite: 174, 175].
