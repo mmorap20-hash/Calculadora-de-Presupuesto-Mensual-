@@ -1,1 +1,102 @@
+DOCUMENTO DE ESPECIFICACIÓN DE REQUERIMIENTOS DE SOFTWARE (DRS)
+VERSIÓN 1.0
 
+PROYECTO: CALCULADORA DE PRESUPUESTO MENSUAL
+
+1. INTRODUCCIÓN
+
+1.1 Propósito
+Este documento describe los requerimientos de la Calculadora de Presupuesto Mensual, una aplicación para la gestión inicial de finanzas personales.
+
+1.2 Alcance
+Sistema que permite registrar ingresos y gastos, y calcular el balance general.
+
+2. REQUERIMIENTOS FUNCIONALES
+
+RF-01: Registrar Ingresos
+Descripción: El sistema debe permitir al usuario crear un registro de sus ingresos mensuales.
+Prioridad: Alta
+Estado: Aprobado
+
+RF-02: Registrar Gastos
+Descripción: El sistema debe permitir al usuario crear un registro de sus gastos mensuales.
+Prioridad: Alta
+Estado: Aprobado
+
+RF-03: Calcular Balance Total
+Descripción: El sistema debe calcular automáticamente el balance general (Ingresos - Gastos) del usuario.
+Prioridad: Crítica
+Estado: Aprobado
+
+RF-04: Generar Informe Financiero
+Descripción: El sistema debe generar un informe detallado que muestre el estado económico mensual.
+Prioridad: Media
+Estado: Aprobado
+
+3. REQUERIMIENTOS NO FUNCIONALES
+
+RNF-01: Plataforma
+Descripción: El sistema está diseñado inicialmente para uso en escritorio.
+Tipo: Restricción Operativa
+
+RNF-02: Fiabilidad
+Descripción: El sistema debe ser percibido como una herramienta práctica y confiable.
+Tipo: Calidad (Usabilidad/Confianza)
+
+RNF-03: Persistencia (Problema)
+Descripción: El sistema no cuenta con un mecanismo robusto para guardar la información permanentemente. (Esto se identifica como un problema de diseño inicial).
+Tipo: Restricción Técnica
+
+
+
+DOCUMENTO DE ESPECIFICACIÓN DE REQUERIMIENTOS DE SOFTWARE (DRS)
+VERSIÓN 2.0 (Post-Mantenimiento)
+
+PROYECTO: CALCULADORA DE PRESUPUESTO MENSUAL
+
+1. INTRODUCCIÓN
+
+1.1 Propósito
+Este documento describe los requerimientos funcionales y no funcionales de la versión 2.0, enfocada en la mejora de la confiabilidad, estabilidad y adaptabilidad del sistema.
+
+1.2 Alcance
+Se añade la validación de datos, almacenamiento persistente, y compatibilidad multiplataforma (PWA) al alcance inicial.
+
+2. REQUERIMIENTOS FUNCIONALES
+
+RF-05: Validación de Montos
+Descripción: El sistema debe incorporar un sistema de validación automática que verifique que los montos ingresados sean numéricos y positivos.
+Origen: Mantenimiento Correctivo
+Prioridad: Crítica
+
+RF-06: Bloqueo de Registro
+Descripción: El sistema debe bloquear el registro de información hasta que todos los campos requeridos estén completos y validados.
+Origen: Mantenimiento Correctivo
+Prioridad: Alta
+
+RF-07: Almacenamiento Persistente
+Descripción: El sistema debe integrar una base de datos local (ej. SQLite) que permita conservar los registros financieros de forma segura y permanente.
+Origen: Mantenimiento Preventivo
+Prioridad: Crítica
+
+RF-08: Gestión de Datos (CRUD)
+Descripción: El sistema debe configurar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión completa de los movimientos financieros.
+Origen: Mantenimiento Preventivo
+Prioridad: Alta
+
+3. REQUERIMIENTOS NO FUNCIONALES
+
+RNF-04: Robustez y Continuidad
+Descripción: Se debe evitar la pérdida de información, garantizando la conservación y recuperación de datos entre sesiones.
+Tipo: Fiabilidad / Robustez
+Origen: Mantenimiento Preventivo
+
+RNF-05: Adaptabilidad Multiplataforma (PWA)
+Descripción: El sistema debe ser accesible y ejecutarse eficientemente en navegadores, dispositivos móviles y Tablets mediante una Versión Web Progresiva (PWA).
+Tipo: Restricción Operativa / Portabilidad
+Origen: Mantenimiento Adaptativo
+
+RNF-06: Diseño Responsive
+Descripción: La interfaz gráfica debe adaptarse a un diseño responsive para mantener la usabilidad y la compatibilidad en distintos tamaños de pantalla y sistemas operativos.
+Tipo: Usabilidad / Interfaz de Usuario
+Origen: Mantenimiento Adaptativo
