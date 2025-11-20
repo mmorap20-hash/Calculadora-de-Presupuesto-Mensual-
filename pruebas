@@ -1,1 +1,26 @@
+DOCUMENTO: PLAN DE PRUEBAS FUNCIONALES
+VERSIÓN 1.0
 
+PROYECTO: CALCULADORA DE PRESUPUESTO MENSUAL
+
+1. INTRODUCCIÓN
+
+1.1. Propósito
+Establecer los casos de prueba para validar la implementación de las mejoras de mantenimiento.
+
+2. CASOS DE PRUEBA
+
+CP-01: Validación de Datos (Monto Negativo)
+Objetivo: Verificar el Mantenimiento Correctivo (RF-05).
+Pre-condiciones: Interfaz de registro de gastos disponible.
+Resultado Esperado: El sistema debe mostrar un mensaje de advertencia y bloquear el registro.
+
+CP-02: Persistencia de Datos (Cierre y Reapertura)
+Objetivo: Verificar el Mantenimiento Preventivo (RF-07).
+Pre-condiciones: Módulo de persistencia implementado.
+Resultado Esperado: Los datos registrados deben estar disponibles y el balance total debe conservarse al reabrir la aplicación.
+
+CP-03: Adaptabilidad Multiplataforma (PWA en Móvil)
+Objetivo: Verificar el Mantenimiento Adaptativo (RNF-05).
+Pre-condiciones: Versión PWA accesible vía URL.
+Resultado Esperado: La interfaz debe adaptarse de forma responsive, y todas las funciones deben operar correctamente en el dispositivo móvil.
